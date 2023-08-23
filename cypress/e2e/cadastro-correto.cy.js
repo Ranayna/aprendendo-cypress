@@ -3,8 +3,9 @@ describe('Página de cadastro', () => {
 
   //! como padrão ele colocar como "passes", então é necessario mudar o nome para ficar mais facil de entender. 
   //!o nome precisa ser descritivo para que todo mundo consiga entender. 
+  //! se aparecer um erro de localhost é necessario baixar o arquivo do projeto novamente. 
   it('Preencher os campos do formulário corretamente para cadastrar um novo usuário', () => {
-    cy.visit('http://localhost:4200/#/home')
+    cy.visit('http://localhost:4200/#/home');
 
     //! para pegar botão
     //*link e escrita do link
@@ -12,7 +13,7 @@ describe('Página de cadastro', () => {
 
     //! para pegar o campo de escrita do usuário
     //! O  ideal é que cada elemento tenha um identificador de data-test ou data-id dentro da estrutura do HTML.
-    cy.get('[data-test="email"]').type('catarina@email.com.br')
+    cy.get('[data-test="email"]').type('catarina@email.com.br');
     cy.get('[data-test="fullName"]').type('Catarina Pessoa');
     cy.get('[data-test="registerUserName"]').type('catarinap');
     cy.get('[data-test="registerPassword"]').type('catarina123');
