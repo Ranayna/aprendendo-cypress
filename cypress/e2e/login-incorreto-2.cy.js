@@ -20,7 +20,7 @@ describe('Página de login', () => {
 
     //!Implementa uma nova função. 
     it('Deve falhar mesmo que os campos sejam preenchidos corretamente', () => {
-      cy.login('carowl', '12345678');
+      cy.login('catarinap', 'catarina123');
       //! esse comando vai esperar a resposta do stub
       cy.wait('@stubPost')
     })
