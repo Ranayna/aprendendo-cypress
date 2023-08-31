@@ -1,4 +1,4 @@
-// //todo: login reorganizado pensando no reuso do codigo do login. 
+// //todo: login com função reutilizável. 
 describe('Página de login', () => {
     //Deixa como algo universal para os próximos acessos
     beforeEach(() => {
