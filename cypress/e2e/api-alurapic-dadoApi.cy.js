@@ -1,4 +1,5 @@
 //todo: Fazendo uma requisição direto da API
+//todo: interação com a API
 describe('Api Alurapic', () => {
     it('Dados da API', () => {
         //! criando uma requisição para API

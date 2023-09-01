@@ -1,5 +1,6 @@
 //todo: teste para verificar o que está acontecendo dentro da página do usuário. 
 //todo: O teste também serve para  verificar se o elemento estava realmente ali no back-end, usando uma requisição da nossa API.
+//todo: interação com a API
 describe('Api Alurapic', () => {
      it('Fotos do usuário', () => {
         cy.request({

@@ -1,5 +1,6 @@
 //todo: Teste para verificar a resposta da Api em um determinado tempo.
 //todo: simulando uma situação de flaky test
+//todo: interação com a API
 describe('Api Alurapic', () => {
     //! Variavel que recebe o tempo esperado 
     //! Math.random() = cria um tempo que vai variar em 50 milisegundos, mas esse tempo pode ser maior 
