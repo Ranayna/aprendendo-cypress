@@ -5,9 +5,10 @@ describe('Api Alurapic', () => {
         cy.request({
             //! metodo POST
             method:'POST',
-            //! url mostrada 
+            //! url mostrada da página de login
             url: 'http://localhost:3000/user/login',
             //! Ao invés de colocar manualmente o nome e a senha do usuário, ele vai pegar isso do documento env.
+            //! Preenche os campos do formulario
             body:Cypress.env()
         //! cria então a resposta da requisição. O "res" significa que a resposta da nossa requisição estará dentro dessa função, e criamos uma arrow function.
         }).then((res) => {
