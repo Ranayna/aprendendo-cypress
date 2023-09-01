@@ -27,5 +27,5 @@ class Cadastro {
     }
 }
 
-
-
+//! classe disponível para ser reutilizada.
+export default new Cadastro();
