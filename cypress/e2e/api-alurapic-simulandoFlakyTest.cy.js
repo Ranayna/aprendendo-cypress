@@ -1,7 +1,9 @@
-//todo: Teste para verificar a resposta da Api em um determinado tempo. 
+//todo: Teste para verificar a resposta da Api em um determinado tempo.
+//todo: simulando uma situação de flaky test
 describe('Api Alurapic', () => {
-    //!Variavel que contém o tempo esperado 
-    const tempoEsperado = 
+    //! Variavel que recebe o tempo esperado 
+    //! Math.random() = cria um tempo que vai variar em 50 milisegundos, mas esse tempo pode ser maior 
+    const tempoEsperado = Math.random() * 50
     it('Buscar fotos e dados', () => {
        cy.request({
            //! Não é mais metodo post porque não estou enviado dados para a API, estou pedindo que ela me traga algo do back
@@ -18,6 +20,10 @@ describe('Api Alurapic', () => {
            expect(res.body[0]).to.have.property('description')
            //! Vai pegar a primeira foto pela posição zero e também pela descrição.
            expect(res.body[0].description).to.be.equal('pato filhote')
+           //! Eu quero que a resposta da requisição seja menor que o tempo esperado.
+           //! lte = tempo esperado, a limitação de tempo
+           //! passa como parametro a variavél do tempo esperado que recebe o tempo 
+           expect(res.duration).to.be.lte(tempoEsperado)
        })
    })
 })
